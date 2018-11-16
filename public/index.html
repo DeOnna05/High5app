@@ -23,20 +23,10 @@
             <br>
             <div class="container">
                 <!-- Modal trigger button -->
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block" data-toggle="modal" data-target="#Modal">Give High 5</button>
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block" data-toggle="modal" data-target="#Modal">Give
+                    High 5</button>
                 <br>
                 <div class="card-deck">
-                    <div class="card border-primary mb-3">
-                        <div class="card-header text-center">Title</div>
-                        <div class="card-body text-primary">
-                            <h6 class="card-title text-center">To: Eve</h6>
-                            <p class="card-text text-center">Generate message for high 5 here. Lorem ipsum dolor, sit
-                                amet consectetur adipisicing elit. Repudiandae quam doloribus, ullam cumque quaerat vel
-                                fuga, itaque amet possimus placeat tempora voluptatum minima laboriosam aliquam
-                                repellat? Voluptatem quasi porro fugit!</p>
-                            <h6 class="card-title text-center">From: Adam</h6>
-                        </div>
-                    </div>
                     <div class="card border-primary mb-3">
                         <div class="card-header text-center">Title</div>
                         <div class="card-body text-primary">
@@ -77,8 +67,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                        <form>     
-                                <div class="form-group">                   
+                    <form>
+                        <div class="form-group">
                             <label>Sender
                                 <select>
                                     <option value="husker">Husker</option>
@@ -87,30 +77,30 @@
                                     <option value="apollo">Apollo</option>
                                 </select>
                             </label>
-                                </div>
-                                <div class="form-group">
-                                <label>Reciever
-                                    <select>
-                                        <option value="husker">Husker</option>
-                                        <option value="starbuck">Starbuck</option>
-                                        <option value="hotdog">Hot Dog</option>
-                                        <option value="apollo">Apollo</option>
-                                    </select>
-                                </label>
-                                </div>
-                                <div class="form-group">
-                                        <label for="recipient-name" class="col-form-label">Title:</label>
-                                        <input type="text" class="form-control" id="recipient-name">
-                                      </div>
-                                <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Message:</label>
-                                    <textarea class="form-control" id="message-text"></textarea>
-                                </div>
-                        </form>
+                        </div>
+                        <div class="form-group">
+                            <label>Reciever
+                                <select>
+                                    <option value="husker">Husker</option>
+                                    <option value="starbuck">Starbuck</option>
+                                    <option value="hotdog">Hot Dog</option>
+                                    <option value="apollo">Apollo</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="titleInput">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="messageInput"></textarea>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" id="submitButton" class="btn btn-primary">Submit</button>
                 </div>
             </div>
         </div>
