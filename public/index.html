@@ -22,14 +22,18 @@
             </div>
             <br>
             <div class="container">
-                <button type="button" class="btn btn-outline-primary btn-lg btn-block">Give High 5</button>
+                <!-- Modal trigger button -->
+                <button type="button" class="btn btn-outline-primary btn-lg btn-block" data-toggle="modal" data-target="#Modal">Give High 5</button>
                 <br>
                 <div class="card-deck">
                     <div class="card border-primary mb-3">
                         <div class="card-header text-center">Title</div>
                         <div class="card-body text-primary">
                             <h6 class="card-title text-center">To: Eve</h6>
-                            <p class="card-text text-center">Generate message for high 5 here. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae quam doloribus, ullam cumque quaerat vel fuga, itaque amet possimus placeat tempora voluptatum minima laboriosam aliquam repellat? Voluptatem quasi porro fugit!</p>
+                            <p class="card-text text-center">Generate message for high 5 here. Lorem ipsum dolor, sit
+                                amet consectetur adipisicing elit. Repudiandae quam doloribus, ullam cumque quaerat vel
+                                fuga, itaque amet possimus placeat tempora voluptatum minima laboriosam aliquam
+                                repellat? Voluptatem quasi porro fugit!</p>
                             <h6 class="card-title text-center">From: Adam</h6>
                         </div>
                     </div>
@@ -37,7 +41,10 @@
                         <div class="card-header text-center">Title</div>
                         <div class="card-body text-primary">
                             <h6 class="card-title text-center">To: Eve</h6>
-                            <p class="card-text text-center">Generate message for high 5 here. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae quam doloribus, ullam cumque quaerat vel fuga, itaque amet possimus placeat tempora voluptatum minima laboriosam aliquam repellat? Voluptatem quasi porro fugit!</p>
+                            <p class="card-text text-center">Generate message for high 5 here. Lorem ipsum dolor, sit
+                                amet consectetur adipisicing elit. Repudiandae quam doloribus, ullam cumque quaerat vel
+                                fuga, itaque amet possimus placeat tempora voluptatum minima laboriosam aliquam
+                                repellat? Voluptatem quasi porro fugit!</p>
                             <h6 class="card-title text-center">From: Adam</h6>
                         </div>
                     </div>
@@ -45,42 +52,34 @@
                         <div class="card-header text-center">Title</div>
                         <div class="card-body text-primary">
                             <h6 class="card-title text-center">To: Eve</h6>
-                            <p class="card-text text-center">Generate message for high 5 here. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae quam doloribus, ullam cumque quaerat vel fuga, itaque amet possimus placeat tempora voluptatum minima laboriosam aliquam repellat? Voluptatem quasi porro fugit!</p>
+                            <p class="card-text text-center">Generate message for high 5 here. Lorem ipsum dolor, sit
+                                amet consectetur adipisicing elit. Repudiandae quam doloribus, ullam cumque quaerat vel
+                                fuga, itaque amet possimus placeat tempora voluptatum minima laboriosam aliquam
+                                repellat? Voluptatem quasi porro fugit!</p>
                             <h6 class="card-title text-center">From: Adam</h6>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="card-footer text-muted text-center">Created by DeOnna Gray - Copyright 2018</div>
         </div>
     </div>
 
-
-    <!-- <form>
-            <div class="grid-container">
-                <div class="grid-x grid-padding-x">
-                    <div class="medium-4 cell">
-
-                        <label>Select Sender
-                            <select>
-                                <option value="husker">Husker</option>
-                                <option value="starbuck">Starbuck</option>
-                                <option value="hotdog">Hot Dog</option>
-                                <option value="apollo">Apollo</option>
-                            </select>
-                        </label>
-                        <div class="medium-4 cell">
-
-
-                            <label>Title
-                                <input type="text" placeholder="Type a Title">
-                            </label>
-                            <label>Message
-                                <textarea placeholder="Type a Message"></textarea>
-                            </label>
-                        </div>
-                        <div class="medium-4 cell">
-
-                            <label>Select Reciever
+    <!-- Modal -->
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Give a High 5!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <form>     
+                                <div class="form-group">                   
+                            <label>Sender
                                 <select>
                                     <option value="husker">Husker</option>
                                     <option value="starbuck">Starbuck</option>
@@ -88,9 +87,34 @@
                                     <option value="apollo">Apollo</option>
                                 </select>
                             </label>
-                            <button class="button secondary" type="button">Close</button>
-                            <button class="button primary" type="submit">Submit</button>
-        </form> -->
+                                </div>
+                                <div class="form-group">
+                                <label>Reciever
+                                    <select>
+                                        <option value="husker">Husker</option>
+                                        <option value="starbuck">Starbuck</option>
+                                        <option value="hotdog">Hot Dog</option>
+                                        <option value="apollo">Apollo</option>
+                                    </select>
+                                </label>
+                                </div>
+                                <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Title:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                      </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                        </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
