@@ -40,6 +40,10 @@ $('#submitButton').on('click', function (event) {
 
     }).then(function (response) {
         $('#high5cards').empty();
+        $('#titleInput').val('');
+        $('#messageInput').val('');
+        $('#sender').val('');
+        $('#receiver').val('');
         viewAll();
     })
 })
