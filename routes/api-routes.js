@@ -27,8 +27,7 @@ router.get('/api/users', function(req, res){
 //Post route to create high5s
 router.post('/api/high5s', function(req, res){
     console.log(req.body)
-    db.High5s.create(req.body)
-    .then(function(data){
+    db.High5s.create(req.body).then(function(data){
         res.json(data);
     })
     .catch(function(error){
