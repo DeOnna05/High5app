@@ -42,7 +42,6 @@ $('#submitButton').on('click', function (event) {
         $('#high5cards').empty();
         viewAll();
     })
-
 })
 
 const userList = function () {
@@ -65,5 +64,6 @@ const userList = function () {
 
 }
 
+//run these functions on document load
 viewAll();
 userList();
