@@ -1,9 +1,9 @@
-const viewAll = function(){ 
+const viewAll = function () {
     $.ajax({
         url: '/api/high5s',
         method: 'GET'
-    }).then(function(response){
-        for(let i = 0; i < response.length; i++){
+    }).then(function (response) {
+        for (let i = 0; i < response.length; i++) {
             let data = response[i];
             let title = data.title;
             let message = data.message;
@@ -26,10 +26,10 @@ const viewAll = function(){
     })
 }
 
-$('#submitButton').on('click', function(event){
+$('#submitButton').on('click', function (event) {
     event.preventDefault();
     $.ajax({
-        url:'/api/high5s',
+        url: '/api/high5s',
         method: 'POST',
         data: {
             title: $('#titleInput').val(),
@@ -37,33 +37,33 @@ $('#submitButton').on('click', function(event){
             sender: $('#sender').val(),
             receiver: $('#receiver').val()
         }
-       
-    }).then(function(response){
-        
+
+    }).then(function (response) {
+        $('#high5cards').empty();
         viewAll();
     })
-    
+
 })
 
-const userList = function(){
+const userList = function () {
     $.ajax({
         url: '/api/users',
-        method: 'GET'            
-        }).then(function(response){
-            $('#receiver').empty();
-            for(let i = 0; i < response.length; i++){
-                let data = response[i];
-                let user = data.name;              
+        method: 'GET'
+    }).then(function (response) {
+        $('#receiver').empty();
+        for (let i = 0; i < response.length; i++) {
+            let data = response[i];
+            let user = data.name;
             $('#receiver').append(`
                 <option value=${user}>${user}</option>
             `)
             $('#sender').append(`
                 <option value=${user}>${user}</option>
             `)
-            }
-        })
-       
-    }
+        }
+    })
+
+}
 
 viewAll();
 userList();

@@ -12,18 +12,14 @@ const High5sSchema = new Schema({
         trim: true,
         required: "A Message is Required"
     },
-    sender: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Users"
-        }
-    ],
-    receiver: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Users"
-        }
-    ]
+    sender: {
+        type: String,
+        required: "A Sender is Required"
+    },
+    receiver: {
+        type: String,
+        required: "A Receiver is Required"
+    }
 });
 
 const High5s = mongoose.model("High5s", High5sSchema);
