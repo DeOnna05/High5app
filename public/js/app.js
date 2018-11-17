@@ -1,7 +1,3 @@
-$(document).ready(function () {
-    $('#Modal').modal(options)
-});
-
 const viewAll = function(event){
     event.preventDefault();
 
@@ -28,16 +24,21 @@ const viewAll = function(event){
     })
 }
 
-$('#submitButton').on('click', function(){
+$('#submitButton').on('click', function(event){
     event.preventDefault();
+    console.log("test")
     $.ajax({
         url:'/api/high5s',
         method: 'POST',
         data: {
             title: $('#titleInput').val(),
             message: $('#messageInput').val(),
-            sender: $('').val(),
-            receiver: $('').val()
+            sender: $('#sender').val(),
+            receiver: $('#receiver').val()
         }
+       
+    }).then(function(response){
+        console.log(response)
     })
+    
 })
